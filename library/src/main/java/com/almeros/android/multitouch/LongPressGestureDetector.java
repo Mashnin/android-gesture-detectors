@@ -12,6 +12,7 @@ public class LongPressGestureDetector {
 
     public interface OnLongPressGestureListener {
         public void onLongPressBegin(LongPressGestureDetector detector);
+
         public void onLongPressEnd(LongPressGestureDetector detector);
     }
 
@@ -23,7 +24,8 @@ public class LongPressGestureDetector {
     private int slop;
     private Handler handler = new Handler();
     private Runnable callback = new Runnable() {
-        @Override public void run() {
+        @Override
+        public void run() {
             if (pressing) {
                 listener.onLongPressBegin(LongPressGestureDetector.this);
             }
