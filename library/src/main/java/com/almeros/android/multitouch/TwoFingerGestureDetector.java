@@ -168,13 +168,7 @@ public abstract class TwoFingerGestureDetector extends BaseGestureDetector {
         boolean p1sloppy = x1 < edgeSlop || y1 < edgeSlop
                 || x1 > rightSlop || y1 > bottomSlop;
 
-        if (p0sloppy && p1sloppy) {
-            return true;
-        } else if (p0sloppy) {
-            return true;
-        } else if (p1sloppy) {
-            return true;
-        }
+//        return p0sloppy || p1sloppy;
         return false;
     }
 
